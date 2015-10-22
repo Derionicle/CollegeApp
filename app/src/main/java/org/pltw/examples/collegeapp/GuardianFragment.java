@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class GuardianFragment extends Fragment {
     private static final String TAG = "GuardianFragment";
-    private Guardian mGuardian;
+    private Profile mProfile;
 
     private TextView mFirstName;
     private EditText mEnterFirstName;
@@ -27,7 +27,7 @@ public class GuardianFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_guardian, container,
                 false);
-        mGuardian = new Guardian("Anne", "Bryon");
+        mProfile = new Profile("Anne", "Bryon");
 
         mFirstName = (TextView)rootView.findViewById(R.id.first_name);
         mEnterFirstName =
@@ -35,7 +35,7 @@ public class GuardianFragment extends Fragment {
         occupation =
                 (EditText)rootView.findViewById(R.id.editText);
 
-        mFirstName.setText(mGuardian.getFirstName());
+        mFirstName.setText(mProfile.getFirstName());
 
         FirstNameTextChanger firstNameTextChanger = new FirstNameTextChanger();
 
@@ -45,7 +45,7 @@ public class GuardianFragment extends Fragment {
         mEnterLastName =
                 (EditText)rootView.findViewById(R.id.enter_last_name);
 
-        mLastName.setText(mGuardian.getLastName());
+        mLastName.setText(mProfile.getLastName());
 
         LastNameTextChanger lastNameTextChanger = new LastNameTextChanger();
 
@@ -64,12 +64,12 @@ public class GuardianFragment extends Fragment {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int
                 count) {
-            mGuardian.setFirstName(s.toString());
+            mProfile.setFirstName(s.toString());
         }
 
         @Override
         public void afterTextChanged(Editable s) {
-            mFirstName.setText(mGuardian.getFirstName());
+            mFirstName.setText(mProfile.getFirstName());
         }
     }
 
@@ -83,12 +83,12 @@ public class GuardianFragment extends Fragment {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int
                 count) {
-            mGuardian.setLastName(s.toString());
+            mProfile.setLastName(s.toString());
         }
 
         @Override
         public void afterTextChanged(Editable s) {
-            mLastName.setText(mGuardian.getLastName());
+            mLastName.setText(mProfile.getLastName());
         }
     }
 

@@ -1,6 +1,6 @@
 package org.pltw.examples.collegeapp;
 
-public class Guardian {
+public class Profile {
     private String mFirstName;
     private String mLastName;
 
@@ -19,7 +19,7 @@ public class Guardian {
     public void setLastName(String lastName) {
         mLastName = lastName;
     }
-    Guardian(String fn, String ln) {
+    Profile(String fn, String ln) {
         mFirstName = fn;
         mLastName = ln;
     }

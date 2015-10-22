@@ -7,9 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.Fragment;
 
-
-public class FamilyMemberActivity extends FragmentActivity {
-    private static final String TAG = "FamilyMemberActivity";
+public class ApplicantActivity extends FragmentActivity {
+    private static final String TAG = "ApplicantActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
