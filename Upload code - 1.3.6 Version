@@ -1,0 +1,12 @@
+public void upload() {
+        String url = "arduino.local/arduino/addFamily";
+        url += mFamily.size();
+        for (FamilyMember member : mFamily){
+            String firstName = member.getFirstName();
+            String lastName = member.getLastName();
+            url += firstName + "/";
+            url += lastName + "/";
+        }
+        Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( url ) );
+        startActivity( browse );
+    }
